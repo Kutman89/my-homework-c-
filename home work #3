@@ -2,9 +2,8 @@
 using namespace std;
 
 int main() {
-	int num;
-	setlocale(LC_ALL, "ru");
-	cout << "The program finds the sum of even numbers\n";
+	int num;	
+	cout << "The program determines whether the number is prime or composite\n";
 	cout << "Enter data: ";
 	cin >> num;
 	if (num == 1)

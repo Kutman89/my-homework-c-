@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num;	
+	cout << "The program finds the sum of even numbers\n";
+	cout << "Enter data: ";
+	cin >> num;
+	if (num == 1)
+		cout << "1 cannot be simple or composite";
+	else if (num % 1 == 0 && num % 2 == 0 && num != 2)
+		cout << num << " - is a composite number";
+	else
+		cout << num << " - is a prime number";
+
+	return 0;
+}

@@ -8,7 +8,7 @@ int main() {
 	for (int i = 1; i <= num; ++i) {
 		res *= i;
 	}
-	cout << "факториал числа " << num << " будет: " << res;
+	cout << "the factorial of " << num << " will be: " << res;
 		
 	return 0;
 }

@@ -2,13 +2,14 @@
 using namespace std;
 
 int main() {
-	int num;	
+	int num;
+	setlocale(LC_ALL, "ru");
 	cout << "The program finds the sum of even numbers\n";
 	cout << "Enter data: ";
 	cin >> num;
 	if (num == 1)
 		cout << "1 cannot be prime or composite";
-	else if (num % 1 == 0 && num % 2 == 0 && num != 2)
+	else if ((num % 3 == 0 || num % 2 == 0) && num != 2)
 		cout << num << " - is a composite number";
 	else
 		cout << num << " - is a prime number";

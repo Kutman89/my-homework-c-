@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num, res = 0, num1;
+	cout << "the program finds the sum of even numbers\n";
+	cout << "how many numbers do you want to enter?: ";
+	cin >> num;
+	for (int i = 1; i <= num; ++i) {
+		cout << "enter a number: ";
+		cin >> num1;
+		if (num1 % 2 == 0)
+			res += num1;
+	}
+	cout << "the sum of the even numbers is: " << res;
+
+	return 0;
+}

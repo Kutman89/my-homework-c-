@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "ru");   
+	int num, res = 1;
+	cin >> num;
+	for (int i = 1; i <= num; ++i) {
+		res *= i;
+	}
+	cout << "факториал числа " << num << " будет: " << res;
+		
+	return 0;
+}

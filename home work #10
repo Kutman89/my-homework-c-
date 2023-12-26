@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int num;
+    cin >> num;
+    int num1 = num;
+    for (int i = 1; i <= num; i++) {
+        cout << endl;
+        for (int t = 1; t <= i; t++) {
+            cout << t;            
+        }
+    }
+    for (int i = 1; i <= num; i++) {
+        cout << endl;
+        for (int t = 1; t < num1; t++) {
+            cout << t;
+        }
+            num1--;
+    }
+    
+    return 0;
+}

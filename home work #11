@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int kvadrat(double num) {
+    return num * num;
+};
+float pram(double num, double num1) {
+    return num * num1;
+};
+float treo(double a, double b, double c) {
+    float p = (a + b + c) / 2;
+    return sqrt(p * (p - a) * (p - b) * (p - c));
+};
+int main(){
+    setlocale(LC_ALL, "ru");
+    int vol;
+    float a, b, c;
+    cout << "1.квадрат 2.прямоугольник 3.треугольник: ";
+    cin >> vol;
+    switch (vol) {
+    case 1:
+        cin >> a;
+        cout << kvadrat(a);
+        break;
+    case 2:
+        cin >> a >> b;
+        cout << pram(a, b);
+        break;
+    case 3:
+        cin >> a >> b >> c;
+        cout << treo(a, b, c);
+        break;
+    default:
+        cout << "Error";
+    }
+    return 0;
+}

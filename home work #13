@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+long rev(long num) {
+	long num1 = 0;
+	while (num > 0) {
+		long n1 = num % 10;
+		num1 += 1;
+		num /= 10;
+	}
+	return num1;
+};
+
+int main()
+{
+	long l = 0;
+	for (long i = 1; l == 0; i = (i * 10) + 1) {
+		if (i % 1991 == 0) {
+			l = i;
+			cout << l << " - " << rev(l) << " digits";
+		}			
+    }
+}

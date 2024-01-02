@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int num1,num2, m = 1;
+	cout << "Enter numbers\n";
+	cin >> num1;
+	do{
+		cin >> num2;
+		m++;
+		if (num1 == num2) {
+			break;
+		}
+		num1 = num2;
+
+	}while (true);
+	cout << "You've entered " << m << " numbers";
+
+	return 0;
+}

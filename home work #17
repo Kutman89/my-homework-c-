@@ -1,0 +1,28 @@
+#include <iostream>
+#include <unordered_set>
+#include <string>
+using namespace std;
+
+bool res(int num) {
+    unordered_set<char> digitSet;
+    string numStr = to_string(num);
+
+    for (char digit : numStr) {
+        if (!digitSet.insert(digit).second) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void prov() {
+    for (int num = 10; num <= 1000; ++num) {
+        if (res(num)) {
+            cout << num << " ";
+        }
+    }
+}
+int main() {
+    prov();
+    return 0;
+}

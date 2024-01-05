@@ -7,7 +7,7 @@ int main() {
     int num;
     cin >> num;
     for (int i = 1; i <= num; i++) {
-        char sim = 48 + rand() % 90;
+        char sim = 48 + rand() % (90 - 48 + 1);
         cout << sim;
     }
     return 0;

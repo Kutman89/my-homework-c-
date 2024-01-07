@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n, kfirst;
+    vector<int> res;
+    cout << "How many stations: ";
+    cin >> n;
+    res.push_back(n);
+    cout << "starting number for passenger: ";
+    cin >> kfirst;
+    res.push_back(kfirst);
+    for (int i = 0; i < n; ++i) {
+        int off, on;
+        cout << "\nstation" << i + 1 << endl;
+        cout << "got off: ";
+        cin >> off;
+        if (off > kfirst) {
+            cout << "error";
+            return 0;
+        }
+        res.push_back(off);
+        kfirst -= off;
+        cout << "got on: ";
+        cin >> on;
+        res.push_back(on);
+        kfirst += on;
+    }
+    cout << "\ntrain.txt\n";
+    for (int l = 0; l < res.size(); ++l) {
+        if (l % 2 == 0) {
+            cout << endl;
+        }        
+        cout << res[l] << "\t";
+    }
+    cout << "\n\ntrainout.txt\n\n" << kfirst;
+    return 0;
+}

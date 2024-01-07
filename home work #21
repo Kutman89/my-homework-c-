@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int n;
+    cin >> n;
+    double res = 36 * pow((1.0 / 6), n);
+    cout << res;
+
+    return 0;
+}

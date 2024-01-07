@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<string> chis = { "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+vector<string> teens = { "", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+vector<string> tens = { "", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+
+string con(int num) {
+    if (num >= 100) {
+        return chis[num / 100] + " hundred " + con(num % 100);
+    }
+    else if (num >= 20) {
+        return tens[num / 10] + " " + chis[num % 10];
+    }
+    else if (num >= 11) {
+        return teens[num - 10];
+    }
+    else {
+        return chis[num];
+    }
+}
+
+int main() {
+    int number;
+    setlocale(LC_ALL, "ru");
+    cout << "enter number: ";
+    cin >> number;
+
+    if (number < 0 || number > 999) {
+        cout << "error" << endl;
+        return 1;
+    }
+
+    if (number == 0) {
+        cout << "output: zero" << endl;
+    }
+    else {
+        cout << "output: " << con(number) << endl;
+    }
+
+    return 0;
+}

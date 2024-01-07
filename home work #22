@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char color;
+    cin >> color;
+    if (color == 'r') {
+        cout << "WAIT";
+    }
+    else if (color == 'y') {
+        cout << "Get Ready";
+    }
+    else if (color == 'g') {
+        cout << "Go";
+    }
+    else {
+         cout << "Wrong input";
+    }        
+    return 0;
+}

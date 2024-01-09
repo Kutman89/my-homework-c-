@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int factorial(int i) {
+    int result = 1;
+    for (int l = 1; l <= i; ++l) {
+        result *= l;
+    }
+    return result;
+}
+
+int main(){
+    double n, res = 0;
+    cin >> n;
+    for (int i = 1; i <= n; ++i) {
+        res += i + ((n - 1) / factorial(i));
+    }
+    cout << res;
+    return 0;
+}

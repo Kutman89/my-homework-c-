@@ -4,13 +4,14 @@ using namespace std;
 int main() {
     srand(time(0));
     int m[11]{0};
-    int num;
+    int n1, n2;
     for (int i = 0; i < 1000; ++i) {
-        num = 2 + rand() % (12 - 2 +1);
-        m[num-2] += num;
+        n1 =  + rand() % 6;
+        n2 =  + rand() % 6;
+        m[n1+n2]++;
     }
     for (int i = 0; i < 11; ++i) {
-        cout << i+2 << "-" << m[i] << endl;
+        cout << i+2 << " - " << m[i] << endl;
     }
     return 0;
 }

@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    srand(time(0));
+    int num = -10 + rand() % 21;    
+    cout << "The generated number is " << num << endl;
+    if (num == 0) {
+        cout << num << " is even number";
+        return 0;
+    }
+    if (abs(num) % 2 == 0) {
+        cout << num << " is even and ";
+    }
+    if (abs(num) % 2 == 1) {
+        cout << num << " is odd and ";
+    }
+    if (abs(num) == num) {
+        cout << "positive";
+    }
+    else{
+        cout << "negative";
+    }
+    return 0;
+}

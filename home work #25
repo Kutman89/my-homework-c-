@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string text;
+    cout << "Input the string: ";
+    getline(cin, text);
+    
+    int digit = 0, str = 0, chr = 0;
+    
+    for (char i : text) {
+        if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z')) {
+            str++;
+        }
+        else if (i >= '0' && i <= '9') {
+            digit++;
+        }
+        else {
+            chr++;
+        }
+    }
+
+    int res = str + digit + chr;
+    cout << "\nNumber of Alphabets in the string is : " << res << endl;
+    cout << "Number of digits in the string is : " << digit << endl;
+    cout << "Number of Special characters in the string is : " << chr;
+
+    return 0;
+}

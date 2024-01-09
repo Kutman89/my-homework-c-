@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    srand(time(0));
+    int n, res = 0;
+    cin >> n;
+    cout << n << " random numbers: ";
+    for (int i = 1; i <= n; ++i) {
+        int ran = 1 + rand() % 100;
+        cout << ran << " ";
+        res += ran;
+    }
+    cout << "\nThe sum: " << res;
+    return 0;
+}
